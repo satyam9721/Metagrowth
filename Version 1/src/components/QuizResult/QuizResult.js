@@ -29,18 +29,11 @@ function QuizResult(props) {
 
 
   return (
-    <>
-    {/* <div className='show-score'>
-        Your Score:{props.score}<br/>
-        Total Score:{props.totalScore}
-    </div> */}
-
-    <div>
-      
-    <h2>Contact Information</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Name:</label>
+    <div >
+      <h2 className='text-center ml-4'>Contact Information</h2>
+      <form className='mt-5'onSubmit={handleSubmit}>
+        <div >
+          <label className="elements"  >Name:</label>
           <input
             type="text"
             name="name"
@@ -50,7 +43,7 @@ function QuizResult(props) {
           />
         </div>
         <div>
-          <label>Email:</label>
+          <label className="elements">Email:</label>
           <input
             type="email"
             name="email"
@@ -60,7 +53,7 @@ function QuizResult(props) {
           />
         </div>
         <div>
-          <label>Phone Number:</label>
+          <label className="elements">Phone Number:</label>
           <input
             type="tel"
             name="phoneNumber"
@@ -69,12 +62,12 @@ function QuizResult(props) {
             required
           />
         </div>
+        <Button onClick={props.tryAgain} type="submit" className="btn-warning mt-5">
+          Submit
+        </Button>
       </form>
-      
     </div>
-    <Button  className='outline-primary mt-5' onClick={props.tryAgain}>Submit</Button>
-    </>
-  )
+  );
 }
 
 export default QuizResult
