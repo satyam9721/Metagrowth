@@ -1,0 +1,6 @@
+header {
+    display: flex; /* Use Flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin-right: 6rem;
+  }
