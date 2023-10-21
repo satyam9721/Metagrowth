@@ -84,65 +84,7 @@ function Quizdisplay() {
   );
 
   //important logic for local storage and move to next page aswell
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    const question = quizData[currentPage];
-
-    if (Array.isArray(question.answers)) {
-      // Handle multiple-choice questions
-      let selectedAnswer = "";
-      let selectedWeightage = "";
-
-      question.answers.forEach((answer, index) => {
-        const inputElement = document.getElementById(
-          `radioOption-${question._id}-${index}`
-        );
-        if (inputElement.checked) {
-          selectedAnswer = answer.text;
-          selectedWeightage = answer.weightage;
-        }
-      });
-
-      if (selectedAnswer === "" || selectedWeightage === "") {
-        // Show the pop-up if no option is selected
-        setShowPopUp(true);
-        return;
-      }
-
-      // Save selected answer and weightage to localStorage under a dynamic key
-      localStorage.setItem(`selectedAnswer_${question.index}`, selectedAnswer);
-      localStorage.setItem(
-        `selectedWeightage_${question.index}`,
-        selectedWeightage
-      );
-    } else {
-      // Handle slider/range questions
-      const selectedValue = selectedOptions[question._id];
-
-      if (selectedValue === undefined) {
-        // Show the pop-up if no option is selected
-        setShowPopUp(true);
-        return;
-      }
-
-      // Save selected weightage to localStorage under a dynamic key
-      localStorage.setItem(
-        `selectedWeightage_${question.index}`,
-        selectedValue
-      );
-    }
-
-    // Save common data to localStorage
-    localStorage.setItem(`index_${question.index}`, question.index);
-    localStorage.setItem(`section_${question.index}`, question.section);
-    localStorage.setItem(`question_${question.index}`, question.question);
-
-    // Handle navigation to the next question
-    if (currentPage < quizData.length - 1) {
-      setCurrentPage(currentPage + 1);
-    }
-  };
+ 
 
 
 
