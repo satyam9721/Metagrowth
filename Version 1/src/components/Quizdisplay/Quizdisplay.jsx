@@ -83,9 +83,19 @@ function Quizdisplay() {
     questionsAnswered.includes(question._id)
   );
 
-  //important logic for local storage and move to next page aswell
- 
 
+ 
+  const handleNextPage = () => {
+    const currentQuestion = quizData[currentPage];
+
+    if (selectedOptions[currentQuestion._id] !== undefined) {
+      setCurrentPage(currentPage + 1);
+      setQuestionsAnswered([...questionsAnswered, currentQuestion._id]);
+    } else {
+      // Show the pop-up if no option is selected
+      setShowPopUp(true);
+    }
+  };
 
 
 
@@ -188,7 +198,7 @@ function Quizdisplay() {
                   <Button
                     variant="warning"
                     className="f_btn text-uppercase rounded-pill border-0"
-                    onClick={handleSubmit}
+                    onClick={handleNextPage}
                   >
                     Next
                   </Button>
