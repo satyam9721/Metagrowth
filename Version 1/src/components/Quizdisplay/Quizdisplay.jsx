@@ -55,18 +55,18 @@ function Quizdisplay() {
       });
   }, []);
 
-  // const handleNextPage = () => {
+  const handleNextPage = () => {
 
-  //   const currentQuestion = quizData[currentPage];
+    const currentQuestion = quizData[currentPage];
 
-  //   if (selectedOptions[currentQuestion._id] !== undefined) {
-  //     setCurrentPage(currentPage + 1);
-  //     setQuestionsAnswered([...questionsAnswered, currentQuestion._id]);
-  //   } else {
-  //     // Show the pop-up if no option is selected
-  //     setShowPopUp(true);
-  //   }
-  // };
+    if (selectedOptions[currentQuestion._id] !== undefined) {
+      setCurrentPage(currentPage + 1);
+      setQuestionsAnswered([...questionsAnswered, currentQuestion._id]);
+    } else {
+      // Show the pop-up if no option is selected
+      setShowPopUp(true);
+    }
+  };
 
   const handlePreviousPage = () => {
     setCurrentPage(currentPage - 1);
