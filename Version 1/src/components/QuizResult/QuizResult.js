@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Button } from 'react-bootstrap';
 import './Style.css';
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -12,6 +13,8 @@ function QuizResult(props) {
       name: '',
       email: '',
       phoneNumber: '',})
+
+   const navigate = useNavigate();
     
   
     const handleChange = (e) => {
