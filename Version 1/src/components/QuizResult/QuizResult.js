@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { Button } from 'react-bootstrap';
-import './Style.css';
+import './result.css';
 import { useNavigate } from 'react-router-dom';
 
 
