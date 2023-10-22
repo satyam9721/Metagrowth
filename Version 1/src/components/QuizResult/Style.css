@@ -3,16 +3,24 @@
 /* 
   
   /* Style the form container */
-  form {
-    background-color: #f0f0f0;
+  .contact {
+    background-color: rgb(126, 124, 124);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     width: 300px;
+    margin-left: 11rem;
+    margin-bottom: 6rem;
   }
   
   /* Style form labels */
-  
+  header {
+    
+    margin-right: 4rem;
+    display: flex; /* Use Flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+  }
   
   /* Style form inputs */
   input {
@@ -25,9 +33,15 @@
   
   /* Style the submit button */
   
-  
+.elements{
+    color: rgb(245, 242, 242);
+  }
+  .info{
+color: rgb(240, 248, 255);
+
+  }
   /* Hover effect on submit button */
-  button:hover {
+  button{
     background-color: #062b52;
   }
   
