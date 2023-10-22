@@ -2,5 +2,15 @@ header {
     display: flex; /* Use Flexbox */
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
-    margin-right: 6rem;
+    
+    overflow: hidden;
+    background-color: #000;
+    padding: 10px;
   }
+img{
+  text-align: center;
+  display: flex;
+  margin-left: 50px;
+}
+
+
